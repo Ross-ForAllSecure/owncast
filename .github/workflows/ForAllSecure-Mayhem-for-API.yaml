@@ -20,6 +20,7 @@ jobs:
     - name: Run Mayhem for API to check for vulnerabilities
       uses: ForAllSecure/mapi-action@v1
       with:
+        mayhem-token: ${{ secrets.MAYHEM_TOKEN }}
         api-url: http://localhost:8080
         api-spec: openapi.yaml
         target: rossimo/owncast
